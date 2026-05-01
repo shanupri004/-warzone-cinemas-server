@@ -1,0 +1,59 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Database
+*.db
+*.sqlite3
+
+# SQLAlchemy
+*.db-journal
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Mypy / type checking
+.mypy_cache/
+
+# Ruff / lint
+.ruff_cache/
+
+# FastAPI / Uvicorn
+*.pid
+
+# Vercel (if you deploy backend separately ignore if not used)
+.vercel/
+
+# Node (if frontend in same repo)
+node_modules/
+.next/
