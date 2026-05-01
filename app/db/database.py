@@ -1,6 +1,10 @@
 from sqlmodel import create_engine, Session, SQLModel
+from dotenv import load_dotenv
+import os
 
-DATABASE_URL = "postgresql://postgres.nrsvriqmngvyhbzjmkmk:WarZone%402026@aws-1-ap-southeast-1.pooler.supabase.com:5432/postgres"
+load_dotenv()
+
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 engine = create_engine(DATABASE_URL, echo=True)
 
