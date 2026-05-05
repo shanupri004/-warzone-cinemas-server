@@ -30,6 +30,9 @@ app.add_middleware(
 def on_startup():
     create_db_and_tables()
 
+@app.get("/")
+def root():
+    return {"message": "🎬 Welcome to Warzone Cinemas API"}
 
 app.include_router(movie_routes, prefix="/movies")
 app.include_router(showTime_controls, prefix="/showtimes")
@@ -38,7 +41,4 @@ app.include_router(login, prefix="/auth")
 app.include_router(snacks_routes, prefix="/snacks")
 app.include_router(bookings_routes, prefix="/bookings")
 
-# Root endpoint
-@app.get("/")
-def read_root():
-    return {"message": "🎬 Welcome to Warzone Cinemas API"}
+
